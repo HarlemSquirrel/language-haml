@@ -106,7 +106,7 @@
     'beginCaptures':
       '2':
         'name': 'entity.name.tag.haml'
-    'end': '(?=^\\1\\S)'
+    'end': '^(?! *$|\\1 )'
     'name': 'source.js.embedded.html'
     'patterns': [
       {
