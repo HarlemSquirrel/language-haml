@@ -15,16 +15,7 @@ HAML language grammar for GitHub's Atom IDE.
 You can switch to another language right in the middle of your HAML file by
 using a "filter":
 
-```haml
-%h1 Foo
-  :javascript
-    console.info("Hello, world!")
-%h2 Bar
-  :sass
-    h1
-      color: #990000
-%h3 Baz
-```
+![screenshot](http://ridingtheclutch.com.s3.amazonaws.com/images/haml_filters.png)
 
 This HAML bundle currently supports the following filters:
 
