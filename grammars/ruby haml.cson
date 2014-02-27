@@ -101,6 +101,19 @@
       }
     ]
   }
+  {
+    'begin': '^(\\s*)(:javascript)'
+    'beginCaptures':
+      '2':
+        'name': 'entity.name.tag.haml'
+    'end': '(?=^\\1\\S)'
+    'name': 'source.js.embedded.html'
+    'patterns': [
+      {
+        'include': 'source.js'
+      }
+    ]
+  }
 ]
 'repository':
   'continuation':
