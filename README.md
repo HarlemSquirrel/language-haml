@@ -21,7 +21,7 @@ This HAML bundle currently supports the following filters:
 
 * :javascript
 * :css
-* :sass
+* :sass (CoffeeScript HAML not supported)
 
 The HAML documentation lists the following additional filters:
 
