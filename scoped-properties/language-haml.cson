@@ -1,4 +1,4 @@
 '.text.haml':
   'editor':
     'commentStart': '/ '
-    'increaseIndentPattern': '^$'
+    'increaseIndentPattern': '^\\s*([-%#\\:\\.\\=].*)\\s*$'
