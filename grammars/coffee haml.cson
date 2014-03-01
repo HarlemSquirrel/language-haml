@@ -157,4 +157,4 @@
         'include': '#continuation'
       }
     ]
-'scopeName': 'text.haml'
+'scopeName': 'text.hamlc'
