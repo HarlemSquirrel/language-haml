@@ -12,19 +12,19 @@
     'match': '^(!!!)($|\\s.*)'
     'name': 'meta.prolog.haml'
   }
+  # {
+  #   'captures':
+  #     '1':
+  #       'name': 'punctuation.section.comment.haml'
+  #   'match': '^ *(/|-#)\\s*\\S.*$\\n?'
+  #   'name': 'comment.line.slash.haml'
+  # }
   {
-    'captures':
+    'begin': '^(\\s*)(/|-#)'
+    'beginCaptures':
       '1':
         'name': 'punctuation.section.comment.haml'
-    'match': '^ *(/)\\s*\\S.*$\\n?'
-    'name': 'comment.line.slash.haml'
-  }
-  {
-    'begin': '^( *)(/)\\s*$'
-    'beginCaptures':
-      '2':
-        'name': 'punctuation.section.comment.haml'
-    'end': '^(?!\\1  )'
+    'end': '^(?! *$|\\1 )'
     'name': 'comment.block.haml'
     'patterns': [
       {
