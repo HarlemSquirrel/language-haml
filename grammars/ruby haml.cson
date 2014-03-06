@@ -16,7 +16,7 @@
     'captures':
       '1':
         'name': 'punctuation.section.comment.haml'
-    'match': '^ *(/)\\s*\\S.*$\\n?'
+    'match': '^ *(-#)\\s*\\S.*$\\n?'
     'name': 'comment.line.slash.haml'
   }
   {
