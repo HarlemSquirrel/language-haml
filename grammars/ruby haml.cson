@@ -128,6 +128,32 @@
     ]
   }
   {
+    'begin': '^(\\s*)(:coffeescript|:coffee)'
+    'beginCaptures':
+      '2':
+        'name': 'entity.name.tag.haml'
+    'end': '^(?! *$|\\1 )'
+    'name': 'source.coffee.embedded.html'
+    'patterns': [
+      {
+        'include': 'source.coffee'
+      }
+    ]
+  }
+  {
+    'begin': '^(\\s*)(:ruby)'
+    'beginCaptures':
+      '2':
+        'name': 'entity.name.tag.haml'
+    'end': '^(?! *$|\\1 )'
+    'name': 'source.ruby.embedded.html'
+    'patterns': [
+      {
+        'include': 'source.ruby'
+      }
+    ]
+  }
+  {
     'begin': '^(\\s*)(:sass)'
     'beginCaptures':
       '2':
@@ -140,8 +166,6 @@
       }
     ]
   }
-
-
 ]
 'repository':
   'continuation':
