@@ -127,6 +127,21 @@
       }
     ]
   }
+  {
+    "begin": "#\{",
+    "captures": {
+      "0": {
+        "name": "punctuation.section.embedded.coffee"
+      }
+    },
+    "end": "}",
+    "name": "source.coffee.embedded.html",
+    "patterns": [
+      {
+        "include": "source.coffee"
+      }
+    ]
+  }
 ]
 'repository':
   'continuation':

@@ -166,6 +166,21 @@
       }
     ]
   }
+  {
+    "begin": "#\{",
+    "captures": {
+      "0": {
+        "name": "punctuation.section.embedded.ruby"
+      }
+    },
+    "end": "}",
+    "name": "source.ruby.rails.embedded.html",
+    "patterns": [
+      {
+        "include": "source.ruby.rails"
+      }
+    ]
+  }
 ]
 'repository':
   'continuation':
