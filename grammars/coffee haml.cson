@@ -131,14 +131,14 @@
     "begin": "#\{",
     "captures": {
       "0": {
-        "name": "punctuation.section.embedded.ruby"
+        "name": "punctuation.section.embedded.coffee"
       }
     },
     "end": "}",
-    "name": "source.ruby.rails.embedded.html",
+    "name": "source.coffee.embedded.html",
     "patterns": [
       {
-        "include": "source.ruby.rails"
+        "include": "source.coffee"
       }
     ]
   }
