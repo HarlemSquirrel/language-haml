@@ -24,7 +24,7 @@
     'beginCaptures':
       '2':
         'name': 'punctuation.section.comment.haml'
-    'end': '^(?!\\1  )'
+    'end': '^(?! *$|\\1 )'
     'name': 'comment.block.haml'
     'patterns': [
       {
@@ -53,7 +53,6 @@
       }
       {
         'begin': '\\{(?=.*\\}|.*\\|\\s*$)'
-        'end': '\\}|$|^(?!.*\\|\\s*$)'
         'name': 'meta.section.attributes.haml'
         'patterns': [
           {
