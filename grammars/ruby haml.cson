@@ -53,6 +53,7 @@
       }
       {
         'begin': '\\{(?=.*\\}|.*\\|\\s*$)'
+        'end': '\\}'
         'name': 'meta.section.attributes.haml'
         'patterns': [
           {
