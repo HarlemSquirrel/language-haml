@@ -87,6 +87,19 @@
     ]
   }
   {
+    'begin': '(?<=\\w)\\s*\\('
+    'end': '\\)'
+    'name': 'meta.tag.attribute.haml'
+    'patterns': [
+      {
+        'include': '#tag-stuff'
+      }
+      {
+        'include': 'source.ruby.rails'
+      }
+    ]
+  }
+  {
     'captures':
       '1':
         'name': 'meta.escape.haml'
@@ -209,6 +222,21 @@
       }
       {
         'include': '#continuation'
+      }
+    ]
+  'tag-generic-attribute':
+    'match': '\\b([a-zA-Z\\-:]+)'
+    'name': 'entity.other.attribute-name.haml'
+  'tag-stuff':
+    'patterns': [
+      {
+        'include': '#string-double-quoted'
+      }
+      {
+        'include': '#string-single-quoted'
+      }
+      {
+        'include': '#tag-generic-attribute'
       }
     ]
 'scopeName': 'text.haml'
