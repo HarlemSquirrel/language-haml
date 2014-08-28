@@ -191,12 +191,6 @@
   'tag-stuff':
     'patterns': [
       {
-        'include': '#string-double-quoted'
-      }
-      {
-        'include': '#string-single-quoted'
-      }
-      {
         'include': '#tag-generic-attribute'
       }
     ]
