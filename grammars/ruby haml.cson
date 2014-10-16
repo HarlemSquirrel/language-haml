@@ -41,7 +41,7 @@
         'name': 'punctuation.definition.tag.haml'
       '3':
         'name': 'entity.name.tag.haml'
-    'end': '$|(?!\\.|#|\\{|\\[|=|-|~|/)'
+    'end': '$|(?!\\.|#|\\{|\\[|\\(|=|-|~|/)'
     'patterns': [
       {
         'match': '\\.[\\w-]+'
@@ -65,6 +65,19 @@
         ]
       }
       {
+        'begin': '\\((?=.*\\)|.*\\|\\s*$)'
+        'end': '\\)|$|^(?!.*\\|\\s*$)'
+        'name': 'meta.section.attribute.haml'
+        'patterns': [
+          {
+            'include': '#tag-stuff'
+          }
+          {
+            'include': 'source.ruby.rails'
+          }
+        ]
+      }
+      {
         'begin': '\\[(?=.*\\]|.*\\|\\s*$)'
         'end': '\\]|$|^(?!.*\\|\\s*$)'
         'name': 'meta.section.object.haml'
@@ -83,19 +96,6 @@
       {
         'match': '/'
         'name': 'punctuation.terminator.tag.haml'
-      }
-    ]
-  }
-  {
-    'begin': '(?<=\\w)\\s*\\('
-    'end': '\\)'
-    'name': 'meta.tag.attribute.haml'
-    'patterns': [
-      {
-        'include': '#tag-stuff'
-      }
-      {
-        'include': 'source.ruby.rails'
       }
     ]
   }
