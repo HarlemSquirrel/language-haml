@@ -180,7 +180,7 @@
     ]
   }
   {
-    "begin": "#\{",
+    "begin": "^(?!-#).*?#\{",
     "captures": {
       "0": {
         "name": "punctuation.section.embedded.ruby"
