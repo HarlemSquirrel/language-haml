@@ -41,7 +41,7 @@
         'name': 'punctuation.definition.tag.haml'
       '3':
         'name': 'entity.name.tag.haml'
-    'end': '$|(?!\\.|#|\\{|\\[|=|-|~|/)'
+    'end': '$|(?!\\.|#|\\{|\\[|\\(|=|-|~|/)'
     'patterns': [
       {
         'match': '\\.[\\w-]+'
@@ -61,6 +61,19 @@
           }
           {
             'include': '#continuation'
+          }
+        ]
+      }
+      {
+        'begin': '\\((?=.*\\)|.*\\|\\s*$)'
+        'end': '\\)|$|^(?!.*\\|\\s*$)'
+        'name': 'meta.section.attribute.haml'
+        'patterns': [
+          {
+            'include': '#tag-stuff'
+          }
+          {
+            'include': 'source.ruby.rails'
           }
         ]
       }
@@ -209,6 +222,15 @@
       }
       {
         'include': '#continuation'
+      }
+    ]
+  'tag-generic-attribute':
+    'match': '\\b([a-zA-Z\\-:]+)'
+    'name': 'entity.other.attribute-name.haml'
+  'tag-stuff':
+    'patterns': [
+      {
+        'include': '#tag-generic-attribute'
       }
     ]
 'scopeName': 'text.haml'
