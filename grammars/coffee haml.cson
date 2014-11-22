@@ -52,7 +52,7 @@
         'name': 'entity.name.tag.id.haml'
       }
       {
-        'begin': '\\{(?=.*\\}|.*\\|\\s*$)'
+        'begin': '\\{(?=.*\\}|.*(\\||,)\\s*$)'
         'end': '(\\}$|\\}(\\s+)?\\|(\\s+)?$)'
         'name': 'meta.section.attributes.haml'
         'patterns': [
@@ -148,7 +148,7 @@
     'captures':
       '1':
         'name': 'punctuation.separator.continuation.haml'
-    'match': '(\\|)\\s*\\n'
+    'match': '(\\|,)\\s*\\n'
   'coffeeline':
     'begin': '=|-|~'
     'contentName': 'source.coffee.embedded.haml'
