@@ -65,8 +65,8 @@
         ]
       }
       {
-        'begin': '\\((?=.*\\)|.*\\|\\s*$)'
-        'end': '\\)|$|^(?!.*\\|\\s*$)'
+        'begin': '\\(|\\((?=.*\\)|.*\\|\\s*$)'
+        'end': '\\)'
         'name': 'meta.section.attributes.haml'
         'patterns': [
           {
