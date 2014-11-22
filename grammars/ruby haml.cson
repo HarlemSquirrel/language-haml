@@ -52,7 +52,7 @@
         'name': 'entity.name.tag.id.haml'
       }
       {
-        'begin': '\\{(?=.*\\}|.*\\|\\s*$)'
+        'begin': '\\{(?=.*\\}|.*(\\||,)\\s*$)'
         'end': '\\}'
         'name': 'meta.section.attributes.haml'
         'patterns': [
@@ -187,7 +187,7 @@
     'captures':
       '1':
         'name': 'punctuation.separator.continuation.haml'
-    'match': '(\\|)\\s*\\n'
+    'match': '(\\||,)\\s*\\n'
   'rubyline':
     'begin': '=|-|~'
     'contentName': 'source.ruby.embedded.haml'
