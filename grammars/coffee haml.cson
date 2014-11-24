@@ -24,7 +24,7 @@
     'beginCaptures':
       '2':
         'name': 'punctuation.section.comment.haml'
-    'end': '^(?!\\1  )'
+    'end': '^(?! *$|\\1 )'
     'name': 'comment.block.haml'
     'patterns': [
       {
@@ -52,8 +52,8 @@
         'name': 'entity.name.tag.id.haml'
       }
       {
-        'begin': '\\{(?=.*\\}|.*\\|\\s*$)'
-        'end': '\\}|$|^(?!.*\\|\\s*$)'
+        'begin': '\\{(?=.*\\}|.*(\\||,)\\s*$)'
+        'end': '(\\}$|\\}(\\s+)?\\|(\\s+)?$)'
         'name': 'meta.section.attributes.haml'
         'patterns': [
           {
@@ -65,8 +65,8 @@
         ]
       }
       {
-        'begin': '\\((?=.*\\)|.*\\|\\s*$)'
-        'end': '\\)|$|^(?!.*\\|\\s*$)'
+        'begin': '\\(|\\((?=.*\\)|.*\\|\\s*$)'
+        'end': '\\)'
         'name': 'meta.section.attributes.haml'
         'patterns': [
           {
@@ -161,7 +161,7 @@
     'captures':
       '1':
         'name': 'punctuation.separator.continuation.haml'
-    'match': '(\\|)\\s*\\n'
+    'match': '(\\|,)\\s*\\n'
   'coffeeline':
     'begin': '=|-|~'
     'contentName': 'source.coffee.embedded.haml'

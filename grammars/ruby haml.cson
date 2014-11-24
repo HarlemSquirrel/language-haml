@@ -52,8 +52,8 @@
         'name': 'entity.name.tag.id.haml'
       }
       {
-        'begin': '\\{(?=.*\\}|.*\\|\\s*$)'
-        'end': '\\}|$|^(?!.*\\|\\s*$)'
+        'begin': '\\{(?=.*\\}|.*(\\||,)\\s*$)'
+        'end': '\\}'
         'name': 'meta.section.attributes.haml'
         'patterns': [
           {
@@ -65,8 +65,8 @@
         ]
       }
       {
-        'begin': '\\((?=.*\\)|.*\\|\\s*$)'
-        'end': '\\)|$|^(?!.*\\|\\s*$)'
+        'begin': '\\(|\\((?=.*\\)|.*\\|\\s*$)'
+        'end': '\\)'
         'name': 'meta.section.attribute.haml'
         'patterns': [
           {
@@ -180,7 +180,7 @@
     ]
   }
   {
-    "begin": "#\{",
+    "begin": "^(?!-#).*?#\{",
     "captures": {
       "0": {
         "name": "punctuation.section.embedded.ruby"
@@ -200,7 +200,7 @@
     'captures':
       '1':
         'name': 'punctuation.separator.continuation.haml'
-    'match': '(\\|)\\s*\\n'
+    'match': '(\\||,)\\s*\\n'
   'rubyline':
     'begin': '=|-|~'
     'contentName': 'source.ruby.embedded.haml'
