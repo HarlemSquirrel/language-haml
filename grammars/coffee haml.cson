@@ -141,17 +141,17 @@
     ]
   }
   {
-    "begin": "#\{",
-    "captures": {
-      "0": {
-        "name": "punctuation.section.embedded.coffee"
+    'begin': '#\{'
+    'captures': {
+      '0': {
+        'name': 'punctuation.section.embedded.coffee'
       }
-    },
-    "end": "}",
-    "name": "source.coffee.embedded.html",
-    "patterns": [
+    }
+    'end': '}'
+    'name': 'source.coffee.embedded.html'
+    'patterns': [
       {
-        "include": "source.coffee"
+        'include': 'source.coffee'
       }
     ]
   }
