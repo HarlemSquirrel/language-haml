@@ -180,6 +180,19 @@
     ]
   }
   {
+    'begin': '^(\\s*)(:php)'
+    'beginCaptures':
+      '2':
+        'name': 'entity.name.tag.haml'
+    'end': '^(?! *$|\\1 )'
+    'name': 'text.html.php.embedded.html'
+    'patterns': [
+      {
+        'include': 'text.html.php'
+      }
+    ]
+  }
+  {
     'begin': '^(?!-#).*?#\{'
     'captures': {
       '0': {
