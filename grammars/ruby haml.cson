@@ -180,6 +180,32 @@
     ]
   }
   {
+    'begin': '^(\\s*)(:php)'
+    'beginCaptures':
+      '2':
+        'name': 'entity.name.tag.haml'
+    'end': '^(?! *$|\\1 )'
+    'name': 'text.html.php.embedded.html'
+    'patterns': [
+      {
+        'include': 'text.html.php'
+      }
+    ]
+  }
+  {
+    'begin': '^(\\s*)(:markdown)'
+    'beginCaptures':
+      '2':
+        'name': 'entity.name.tag.haml'
+    'end': '^(?! *$|\\1 )'
+    'name': 'source.gfm.embedded.html'
+    'patterns': [
+      {
+        'include': 'source.gfm'
+      }
+    ]
+  }
+  {
     'begin': '^(?!-#).*?#\{'
     'captures': {
       '0': {
