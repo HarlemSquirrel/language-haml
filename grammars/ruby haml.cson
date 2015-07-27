@@ -41,7 +41,7 @@
         'name': 'punctuation.definition.tag.haml'
       '3':
         'name': 'entity.name.tag.haml'
-    'end': '$|(?!\\.|#|\\{|\\[|\\(|=|-|~|/)'
+    'end': '$|(?!\\.|#|\\{|\\[|\\(|=|-|~|!=|&=|/)'
     'patterns': [
       {
         'match': '\\.[\\w-]+'
@@ -106,7 +106,7 @@
     'match': '^\\s*(\\\\.)'
   }
   {
-    'begin': '^\\s*(?==|-|~)'
+    'begin': '^\\s*(?==|-|~|!=|&=)'
     'end': '$'
     'patterns': [
       {
@@ -228,7 +228,7 @@
         'name': 'punctuation.separator.continuation.haml'
     'match': '(\\||,)\\s*\\n'
   'rubyline':
-    'begin': '=|-|~'
+    'begin': '=|-|~|!=|&='
     'contentName': 'source.ruby.embedded.haml'
     'end': '((do|\\{)( \\|[^|]+\\|)?)$|$|^(?!.*\\|\\s*$)'
     'endCaptures':
