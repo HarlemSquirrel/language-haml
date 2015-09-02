@@ -24,7 +24,7 @@
     'beginCaptures':
       '1':
         'name': 'punctuation.section.comment.haml'
-    'end': '^(?! *$|\\1 )'
+    'end': '\n$'
     'name': 'comment.block.haml'
     'patterns': [
       {
