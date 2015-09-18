@@ -7,8 +7,8 @@ HAML language grammar for GitHub's Atom IDE.
 
 ## Supported Filetypes
 
-* .haml
-* .hamlc (CoffeeScript HAML)
+* `.haml`
+* `.hamlc` (CoffeeScript HAML)
 
 ## Supported filters
 
@@ -19,23 +19,24 @@ using a "filter":
 
 This HAML bundle currently supports the following filters:
 
-* :javascript
-* :css
-* :sass (CoffeeScript HAML not supported)
+* `:javascript`
+* `:coffee`
+* `:css`
+* `:sass`
+* `:scss`
+* `:php`
+* `:ruby`
+* `:markdown`
 
 The HAML documentation lists the following additional filters:
 
-* :cdata
-* :coffee
-* :erb
-* :escaped
-* :less
-* :markdown
-* :plain
-* :preserve
-* :ruby
-* :scss
-* :textile
+* `:cdata`
+* `:erb`
+* `:escaped`
+* `:less`
+* `:plain`
+* `:preserve`
+* `:textile`
 
 To add more you can simply copy and paste one of the captures in the `ruby haml.cson` file
 and make the changes necessary to support your filter of choice:
@@ -55,7 +56,3 @@ and make the changes necessary to support your filter of choice:
   ]
 }
 ```
-
-Send a pull request and I'll get it into the repo ASAP!
-
-LONG LIVE HAML!
