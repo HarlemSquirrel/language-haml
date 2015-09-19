@@ -25,7 +25,11 @@
     "name": "meta.prolog.haml"
   }
   {
-    "match": "^ *(\\-\\#|\\/)\\s*\\S.*$\\n?"
+    "match": "^[\\w]+(?!\\#\\{)[^(\\#\\{)\\}]+(?=\\}),?"
+    "name": "source.ruby.rails"
+  }
+  {
+    "match": "^ *(\\-\\#|\\/)\\s*\\S*.*$\\n?"
     "captures":
       "1":
         "name": "punctuation.section.comment.haml"
@@ -60,8 +64,8 @@
         "name": "entity.name.tag.id.haml"
       }
       {
-        "begin": "\\{(?=.+(,|(do)|\\{|\\}|\\||(\\#.*))\\s*$)"
-        "end": "\\s*\\}\\s*(\\#.*)?$"
+        "begin": "\\{(?=.+(,|(do)|\\{|\\}|\\||(\\#.*))\\s*)"
+        "end": "\\s*\\}(?!.*(?!\\#\\{)\\})"
         "name": "meta.section.attributes.haml"
         "patterns": [
           {
@@ -78,7 +82,7 @@
       {
         "begin": "\\("
         "end": "\\)"
-        "name": "meta.section.attributes.plain.haml"
+        "name": "meta.section.attributes.haml"
         "patterns": [
           {
             "match": "([\\w-]+)(?=\\=)"
@@ -310,9 +314,17 @@
           "name": "keyword.control.ruby.start-block"
       "patterns": [
         {
-          "match": "(\\||,|<|do|\\{)\\s*$\\n"
+          "match": "(\\||,|<|do|\\{)\\s*(\\#.*)?$\\n"
           "name": "source.ruby"
           "patterns": [
+            # {
+            #   "match": "(?<=#.*$)"
+            #   "name": "comment.line.number-sign.ruby"
+            # }
+            # {
+            #   "match": "(?<=,)"
+            #   "name": "punctuation.separator.continuation.haml"
+            # }
             {
               "include": "#rubyline"
             }
