@@ -29,7 +29,7 @@
     "name": "source.ruby.rails"
   }
   {
-    "match": "^ *(\\-\\#|\\/)\\s*\\S*.*$\\n?"
+    "match": "^ *(\\-\\#|\\/|\\-\\s*\\/\\*+)\\s*\\S*.*$\\n?"
     "captures":
       "1":
         "name": "punctuation.section.comment.haml"
