@@ -152,7 +152,7 @@
   }
   {
     "begin": "^(\\s*)(:php)$"
-    "end": "^(?!\\1 )"
+    "end": "^(?!\\1\\s+)"
     "name": "meta.embedded.php"
     "captures":
       "2":
@@ -165,7 +165,7 @@
   }
   {
     "begin": "^(\\s*)(:ruby)$"
-    "end": "^(?!\\1 )"
+    "end": "^(?!\\1\\s+)"
     "name": "meta.embedded.ruby"
     "captures":
       "2":
@@ -178,7 +178,7 @@
   }
   {
     "begin": "^(\\s*)(:markdown)$"
-    "end": "^(?!\\1 )"
+    "end": "^(?!\\1\\s+)"
     "name": "meta.embedded.markdown"
     "captures":
       "2":
@@ -191,7 +191,7 @@
   }
   {
     "begin": "^(\\s*)(:coffee(script)?)$"
-    "end": "^(?!\\1 )"
+    "end": "^(?!\\1\\s+)"
     "name": "meta.embedded.coffee"
     "captures":
       "2":
@@ -204,7 +204,7 @@
   }
   {
     "begin": "^(\\s*)(:javascript)$"
-    "end": "^(?!\\1 )"
+    "end": "^(?!\\1\\s+)"
     "name": "meta.embedded.js"
     "captures":
       "2":
@@ -217,7 +217,7 @@
   }
   {
     "begin": "^(\\s*)(:(s?(a|c)ss|styles?))$"
-    "end": "^(?!\\1 )"
+    "end": "^(?!\\1\\s+)"
     "name": "meta.embedded.sass"
     "captures":
       "2":
