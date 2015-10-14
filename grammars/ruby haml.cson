@@ -29,11 +29,11 @@
     'name': 'source.ruby.rails'
   }
   {
-    'match': '^ *(\\-\\#|\\/|\\-\\s*\\/\\*+)\\s*\\S*.*$\\n?'
+    'match': '^\\s*(\\-\\#|\\/|\\-\\s*\\/\\*+)\\s*\\S*.*$\\n?'
+    'name': 'comment.line.slash.haml'
     'captures':
       '1':
         'name': 'punctuation.section.comment.haml'
-    'name': 'comment.line.slash.haml'
   }
   {
     'begin': '^\\s*(?:((%)([-\\w:]+))|(?=\\.|#))'
@@ -76,9 +76,6 @@
           }
           {
             'include': '#rubyline'
-          }
-          {
-            'include': '#phpline'
           }
         ]
       }
@@ -126,9 +123,6 @@
           }
           {
             'include': '#rubyline'
-          }
-          {
-            'include': '#phpline'
           }
         ]
       }
@@ -282,18 +276,6 @@
         ]
       }
     ]
-  'phpline':
-    'patterns': [
-      {
-        'match': 'elseif|foreach|switch|try'
-        'name': 'keyword.control.php'
-        'patterns': [
-          {
-            'include': 'text.html.php#language'
-          }
-        ]
-      }
-    ]
   'variables':
     'patterns': [
       {
@@ -330,6 +312,36 @@
         '2':
           'name': 'keyword.control.ruby.start-block'
       'patterns': [
+        # Begin matches for PHP control directives before Ruby
+        {
+          'match': '\\s+((break|c(ase|ontinue)|d(e(clare|fault)|ie|o)|e(lse(if)?|nd(declare|for(each)?|if|switch|while)|xit)|for(each)?|if|return|switch|use|while|yield))'
+          'captures':
+            '1':
+              'name': 'keyword.control.php'
+        }
+        {
+          'match': '\\s+((require|include)_once)'
+          'captures':
+            '1':
+              'name': 'keyword.control.import.include.php'
+        }
+        {
+          'match': '\\s+(catch|try|throw|exception|finally)'
+          'name': 'keyword.control.exception.php'
+        }
+        {
+          'match': '\\s+(function\\s*)((?=\\())'
+          'captures':
+            '1':
+              'name': 'storage.type.function.php'
+        }
+        {
+          'match': '\\s+(use\\s*)((?=\\())'
+          'captures':
+            '1':
+              'name': 'keyword.control.php'
+        }
+        # End PHP
         {
           'match': '(\\||,|<|do|\\{)\\s*(\\#.*)?$\\n'
           'name': 'source.ruby'
