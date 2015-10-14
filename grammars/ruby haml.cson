@@ -77,6 +77,9 @@
           {
             'include': '#rubyline'
           }
+          {
+            'include': '#phpline'
+          }
         ]
       }
       {
@@ -123,6 +126,9 @@
           }
           {
             'include': '#rubyline'
+          }
+          {
+            'include': '#phpline'
           }
         ]
       }
@@ -272,6 +278,18 @@
           }
           {
             'include': 'source.ruby'
+          }
+        ]
+      }
+    ]
+  'phpline':
+    'patterns': [
+      {
+        'match': 'elseif|foreach|switch|try'
+        'name': 'keyword.control.php'
+        'patterns': [
+          {
+            'include': 'text.html.php#language'
           }
         ]
       }
