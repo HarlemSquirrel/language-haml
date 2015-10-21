@@ -314,19 +314,19 @@
       'patterns': [
         # Begin matches for PHP control directives before Ruby
         {
-          'match': '\\s+((break|c(ase|ontinue)|d(e(clare|fault)|ie|o)|e(lse(if)?|nd(declare|for(each)?|if|switch|while)|xit)|for(each)?|if|return|switch|use|while|yield))'
+          'match': '\\s+((elseif|foreach|switch|declare|default|use))(?=\\s|\\()'
           'captures':
             '1':
               'name': 'keyword.control.php'
         }
         {
-          'match': '\\s+((require|include)_once)'
+          'match': '\\s+(require_once|include_once)(?=\\s|\\()'
           'captures':
             '1':
               'name': 'keyword.control.import.include.php'
         }
         {
-          'match': '\\s+(catch|try|throw|exception|finally)'
+          'match': '\\s+(catch|try|throw|exception|finally|die)(?=\\s|\\(|\\n)'
           'name': 'keyword.control.exception.php'
         }
         {
