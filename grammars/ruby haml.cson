@@ -19,14 +19,19 @@
   }
   {
     'match': '^(!!!)($|\\s.*)'
+    'name': 'meta.prolog.haml'
     'captures':
       '1':
         'name': 'punctuation.definition.prolog.haml'
-    'name': 'meta.prolog.haml'
   }
   {
-    'match': '^[\\w]+(?!\\#\\{)[^(\\#\\{)\\}]+(?=\\}),?'
-    'name': 'source.ruby.rails'
+    'match': '(?<=\\#\\{)([^#]+)(?=\\})'
+    'name': 'meta.embedded.ruby'
+    'captures':
+      '1':
+        'patterns': [
+          'include': 'source.ruby.rails'
+        ]
   }
   {
     'match': '^\\s*(\\-\\#|\\/|\\-\\s*\\/\\*+)\\s*\\S*.*$\\n?'
@@ -312,7 +317,8 @@
         '2':
           'name': 'keyword.control.ruby.start-block'
       'patterns': [
-        # Begin matches for PHP control directives before Ruby
+        # Begin PHP keywords
+        # @TODO Make sure this doesn't break any inline Ruby
         {
           'match': '\\s+((elseif|foreach|switch|declare|default|use))(?=\\s|\\()'
           'captures':
@@ -341,7 +347,7 @@
             '1':
               'name': 'keyword.control.php'
         }
-        # End PHP
+        # End PHP keywords
         {
           'match': '(\\||,|<|do|\\{)\\s*(\\#.*)?$\\n'
           'name': 'source.ruby'
