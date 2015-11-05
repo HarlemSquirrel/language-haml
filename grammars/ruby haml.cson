@@ -221,7 +221,20 @@
     ]
   }
   {
-    'begin': '^(\\s*)(:(s?(a|c)ss|styles?))$'
+    'begin': '^(\\s*)(:(css|styles?))$'
+    'end': '^(?!\\1\\s+)'
+    'name': 'meta.embedded.css'
+    'captures':
+      '2':
+        'name': 'entity.name.tag.haml'
+    'patterns': [
+      {
+        'include': 'source.css'
+      }
+    ]
+  }
+  {
+    'begin': '^(\\s*)(:sass)$'
     'end': '^(?!\\1\\s+)'
     'name': 'meta.embedded.sass'
     'captures':
@@ -230,6 +243,19 @@
     'patterns': [
       {
         'include': 'source.sass'
+      }
+    ]
+  }
+  {
+    'begin': '^(\\s*)(:scss)$'
+    'end': '^(?!\\1\\s+)'
+    'name': 'meta.embedded.scss'
+    'captures':
+      '2':
+        'name': 'entity.name.tag.haml'
+    'patterns': [
+      {
+        'include': 'source.css.scss'
       }
     ]
   }
