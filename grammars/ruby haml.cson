@@ -101,8 +101,18 @@
             'include': '#variables'
           }
           {
-            'begin': '("|\')'
-            'end': '("|\')'
+            'begin': '"'
+            'end': '"'
+            'name': 'string.quoted.double.ruby'
+            'patterns': [
+              {
+                'include': '#interpolated_ruby'
+              }
+            ]
+          }
+          {
+            'begin': '\''
+            'end': '\''
             'name': 'string.quoted.double.ruby'
             'patterns': [
               {
