@@ -1,6 +1,6 @@
 {
   "name": "language-haml",
-  "version": "0.23.6",
+  "version": "0.23.7",
   "private": true,
   "description": "HAML package for Atom",
   "repository": "https://github.com/cannikin/language-haml",
