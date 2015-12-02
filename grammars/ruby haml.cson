@@ -34,10 +34,11 @@
         ]
   }
   {
-    'match': '^\\s*(\\-\\#|\\/|\\-\\s*\\/\\*+)\\s*\\S*.*$\\n?'
+    'begin': '^(\\s*)(\\-\\#|\\/|\\-\\s*\\/\\*+)'
+    'end': '^(?!\\1\\s+)'
     'name': 'comment.line.slash.haml'
     'captures':
-      '1':
+      '2':
         'name': 'punctuation.section.comment.haml'
   }
   {
