@@ -2,4 +2,3 @@
   'editor':
     'autoIndentOnPaste': false
     'commentStart': '-# '
-    'increaseIndentPattern': '^([-%#\\:\\.\\=].*)\\s*$'
