@@ -134,6 +134,15 @@
   'ul':
     'prefix': 'ul'
     'body': '%ul${1:#${2:selector}}\n\t%li ${3:Lorem ipsum dolor sit amet, consectetur adipisicing elit.}$0'
+  'dl':
+    'prefix': 'dl'
+    'body': '%dl${1:#${2:selector}}\n\t%dt ${3:Lorem ipsum...}\n\t%dd ${4:Lorem ipsum...}$0'
+  'dt':
+    'prefix': 'dt'
+    'body': '%dt ${1:Lorem ipsum...}$0'
+  'dd':
+    'prefix': 'dd'
+    'body': '%dd ${1:Lorem ipsum...}$0'
 '.text.haml, .meta.section.attributes.haml':
   'newline':
     'prefix': '}'
