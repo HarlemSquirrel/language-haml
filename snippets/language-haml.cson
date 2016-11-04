@@ -63,22 +63,22 @@
     'prefix': ':f'
     'body': ':textile\n\t$0'
   'h1':
-    'prefix': 'h'
+    'prefix': 'h1'
     'body': '%h1 ${1:Heading Level 1}\n$0'
   'h2':
-    'prefix': 'h'
+    'prefix': 'h2'
     'body': '%h2 ${1:Heading Level 2}\n$0'
   'h3':
-    'prefix': 'h'
+    'prefix': 'h3'
     'body': '%h3 ${1:Heading Level 3}\n$0'
   'h4':
-    'prefix': 'h'
+    'prefix': 'h4'
     'body': '%h4 ${1:Heading Level 4}\n$0'
   'h5':
-    'prefix': 'h'
+    'prefix': 'h5'
     'body': '%h5 ${1:Heading Level 5}\n$0'
   'h6':
-    'prefix': 'h'
+    'prefix': 'h6'
     'body': '%h6 ${1:Heading Level 6}\n$0'
   'img':
     'prefix': 'img'
