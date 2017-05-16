@@ -18,6 +18,9 @@
     ]
   }
   {
+    'include': '#continuation'
+  }
+  {
     'match': '^(!!!)($|\\s.*)'
     'name': 'meta.prolog.haml'
     'captures':
@@ -78,14 +81,14 @@
       }
       {
         'begin': '(?<!\\#)\\{(?=.+(,|(do)|\\{|\\}|\\||(\\#.*))\\s*)'
-        'end': '\\s*\\}(?!\\s*\\,)(?!\\s*\\|)(?!\\#\\{.*\\})'
+        'end': '\\s*\\}'
         'name': 'meta.section.attributes.haml'
         'patterns': [
           {
-            'include': 'source.ruby.rails'
+            'include': '#continuation'
           }
           {
-            'include': '#continuation'
+            'include': 'source.ruby.rails'
           }
           {
             'include': '#rubyline'
@@ -147,10 +150,10 @@
         'name': 'meta.section.object.haml'
         'patterns': [
           {
-            'include': 'source.ruby.rails'
+            'include': '#continuation'
           }
           {
-            'include': '#continuation'
+            'include': 'source.ruby.rails'
           }
           {
             'include': '#rubyline'
@@ -288,7 +291,7 @@
 ]
 'repository':
   'continuation':
-    'match': '(\\|)\\s*\\n'
+    'match': '(\\|)\\s*$\\n?'
     'captures':
       '1':
         'name': 'punctuation.separator.continuation.haml'
