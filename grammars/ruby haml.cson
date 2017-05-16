@@ -42,7 +42,7 @@
   }
   {
     'begin': '^(\\s*)(\\-\\#|\\/|\\-\\s*\\/\\*+)'
-    'end': '^(?!\\1\\s+|\\n)'
+    'end': '^(?!\\1\\s+|$\\n?)'
     'name': 'comment.line.slash.haml'
     'captures':
       '2':
@@ -360,12 +360,12 @@
   'rubyline':
     {
       'begin': '(&amp|!)?(=|-|~)'
-      'end': '((do|\\{)( \\|[.*]+\\|)?)$|$|^(?!.*\\|\\s*$)\\n'
+      'end': '((do|\\{)( \\|[.*]+\\|)?)$|$|^(?!.*\\|\\s*$)\\n?'
       'name': 'meta.line.ruby.haml'
       'contentName': 'source.ruby.embedded.haml'
       'endCaptures':
         '1':
-          'name': 'source.ruby.embedded.html'
+          'name': 'source.ruby.embedded.haml'
         '2':
           'name': 'keyword.control.ruby.start-block'
       'patterns': [
@@ -401,13 +401,15 @@
         }
         # End PHP keywords
         {
-          'match': '(\\||,|<|do|\\{)\\s*(\\#.*)?$\\n'
+          'match': '(\\||,|<|do|\\{)\\s*(\\#.*)?$\\n?'
           'name': 'source.ruby'
-          'patterns': [
-            {
-              'include': '#rubyline'
-            }
-          ]
+          'captures':
+            '0':
+              'patterns': [
+                {
+                  'include': '#rubyline'
+                }
+              ]
         }
         {
           'match': '#.*$'
