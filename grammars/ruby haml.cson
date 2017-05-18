@@ -363,7 +363,7 @@
   'rubyline':
     {
       'begin': '(&amp|!)?(=|-|~)'
-      'end': '((do|\\{)( \\|[.*]+\\|)?)$|$|^(?!.*\\|\\s*$)\\n?'
+      'end': '((do|\\{)( \\|[.*]+\\|)?)$|$|^(?!.*\\|\\s*)$\\n?'
       'name': 'meta.line.ruby.haml'
       'contentName': 'source.ruby.embedded.haml'
       'endCaptures':
