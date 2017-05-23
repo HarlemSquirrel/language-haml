@@ -404,6 +404,25 @@
         }
         # End PHP keywords
         {
+          'begin': '"'
+          'beginCaptures':
+            '0':
+              'name': 'punctuation.definition.string.end.ruby'
+          'end': '"'
+          'endCaptures':
+            '0':
+              'name': 'punctuation.definition.string.end.ruby'
+          'name': 'string.quoted.double.ruby'
+          'patterns': [
+            {
+              'include': 'source.ruby#interpolated_ruby'
+            }
+            {
+              'include': 'source.ruby#escaped_char'
+            }
+          ]
+        }
+        {
           'match': '(\\||,|<|do|\\{)\\s*(\\#.*)?$\\n?'
           'name': 'source.ruby'
           'captures':
