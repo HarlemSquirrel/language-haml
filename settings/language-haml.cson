@@ -2,3 +2,7 @@
   'editor':
     'autoIndentOnPaste': false
     'commentStart': '-# '
+'.text.hamlc':
+  'editor':
+    'autoIndentOnPaste': false
+    'commentStart': '-# '
