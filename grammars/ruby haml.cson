@@ -237,7 +237,7 @@
     ]
   }
   {
-    'begin': '^(\\s*)(:javascript)$'
+    'begin': '^(\\s*)(:(javascript|es6))$'
     'end': '^(?!\\1\\s+|\\n)'
     'name': 'meta.embedded.js'
     'captures':
