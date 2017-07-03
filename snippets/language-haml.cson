@@ -153,3 +153,43 @@
   '}, :id => "selector"':
     'prefix': ','
     'body': ', :${1:id} => "${2:selector}"$0'
+'.source.haml':
+  'begin …':
+    'prefix': 'beg'
+    'body': 'begin\n\t${1:condition}\n\t$0'
+  'before …':
+    'prefix': 'bef'
+    'body': 'before(:${1:each}) do\n\t$2'
+  'Benchmark.bmbm do …':
+    'prefix': 'bm'
+    'body': 'TESTS = ${1:10_000}\n- Benchmark.bmbm do |${2:results}|\n\t$3'
+  'case …':
+    'prefix': 'case'
+    'body': 'case ${1:object}\n- when ${2:condition}\n\t$3'
+  'class …':
+    'prefix': 'cla'
+    'body': 'class ${1:ClassName}\n\t$2'
+  'def …':
+    'prefix': 'def'
+    'body': 'def ${1:method_name}\n\t$2'
+  'do …':
+    'prefix': 'do'
+    'body': 'do\n\t${1:condition}$0'
+  'if … else …':
+    'prefix': 'ife'
+    'body': 'if ${1:condition}\n\t$2\n- else\n\t$3'
+  'if …':
+    'prefix': 'if'
+    'body': 'if ${1:condition}\n\t$0'
+  'module …':
+    'prefix': 'mod'
+    'body': 'module ${1:ModuleName}\n\t$2'
+  'unless …':
+    'prefix': 'unless'
+    'body': 'unless ${1:condition}\n\t$2'
+  'until …':
+    'prefix': 'until'
+    'body': 'until ${1:condition}\n\t$2'
+  'while …':
+    'prefix': 'while'
+    'body': 'while ${1:condition}\n\t$2'
