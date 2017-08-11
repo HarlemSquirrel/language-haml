@@ -6,3 +6,31 @@
   'editor':
     'autoIndentOnPaste': false
     'commentStart': '-# '
+'.meta.embedded.js':
+  'editor':
+    'commentStart': '// '
+'.meta.embedded.scss':
+  'editor':
+    'commentStart': '// '
+'.meta.embedded.sass':
+  'editor':
+    'autoIndentOnPaste': false
+    'commentStart': '// '
+'.meta.embedded.css':
+  'editor':
+    'commentStart': '/* '
+    'commentEnd': ' */'
+'.meta.embedded.ruby':
+  'editor':
+    'commentStart': '# '
+'.meta.embedded.coffee':
+  'editor':
+    'autoIndentOnPaste': false
+    'commentStart': '# '
+'.meta.embedded.php':
+  'editor':
+    'commentStart': '// '
+'.meta.embedded.markdown':
+  'editor':
+    'commentStart': '[//]: ("'
+    'commentEnd': ')'
