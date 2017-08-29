@@ -3,6 +3,9 @@ language-haml
 =============
 HAML language grammar for GitHub's Atom IDE.
 
+## ⚠️ Looking for maintainer(s) ⚠️
+I no longer use Atom and so as a result will no longer be actively maintaining this package. I will merge PRs but will not be implementing new features or fixing bugs myself. Please see [#17](https://github.com/ezekg/language-haml/issues/71) for more info.
+
 ![screenshot](http://ridingtheclutch.com.s3.amazonaws.com/images/language-haml.png)
 
 ## Supported Filetypes
