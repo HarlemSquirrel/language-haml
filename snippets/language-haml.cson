@@ -87,14 +87,11 @@
     'prefix': 'li'
     'body': '%li ${5:Lorem ipsum...}$0'
   'link_to (route)':
-    'prefix': '='
-    'body': '= link_to "${1:Anchor Text}", ${2:route}_url'
-  'link_to (url)':
-    'prefix': '='
-    'body': '= link_to "${1:Anchor Text}", "${2:#}"'
+    'prefix': 'lt'
+    'body': '= link_to "${1:Anchor Text}", ${2:route}_${3:path}'
   'link_to (wrap selected text)':
     'prefix': '='
-    'body': '= link_to "Anchor text...", ${1:"${2:$0}"}'
+    'body': '= link_to "${1:Anchor Text}", ${2:"${3:$0}"}'
   'ol':
     'prefix': 'ol'
     'body': '%ol${2:{:${3:id} => "${4:selector}"$5\\}}\n\t%li ${6:Lorem ipsum dolor sit amet, consectetur adipisicing elit.}$0'
