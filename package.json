@@ -7,7 +7,7 @@
     "language",
     "haml"
   ],
-  "repository": "https://github.com/cannikin/language-haml",
+  "repository": "https://github.com/HarlemSquirrel/language-haml",
   "license": "MIT",
   "engines": {
     "atom": ">0.50.0"
