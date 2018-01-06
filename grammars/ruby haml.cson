@@ -271,7 +271,7 @@
         'name': 'entity.name.tag.haml'
     'patterns': [
       {
-        'include': 'source.rb'
+        'include': 'source.ruby'
       }
     ]
   }
