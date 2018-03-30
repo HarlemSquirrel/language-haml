@@ -1,37 +1,35 @@
 
 language-haml
 =============
-HAML language grammar for GitHub's Atom IDE.
-
-## ⚠️ Looking for maintainer(s) ⚠️
-I no longer use Atom and so as a result will no longer be actively maintaining this package. I will merge PRs but will not be implementing new features or fixing bugs myself. Please see [#17](https://github.com/ezekg/language-haml/issues/71) for more info.
+[Haml](http://haml.info/) language grammar for GitHub's [Atom](https://atom.io/) IDE.
 
 ![screenshot](http://ridingtheclutch.com.s3.amazonaws.com/images/language-haml.png)
 
 ## Supported Filetypes
 
 * `.haml`
-* `.hamlc` (CoffeeScript HAML)
+* `.hamlc` (CoffeeScript Haml)
 
 ## Supported filters
 
-You can switch to another language right in the middle of your HAML file by
+You can switch to another language right in the middle of your Haml file by
 using a "filter":
 
 ![screenshot](http://ridingtheclutch.com.s3.amazonaws.com/images/haml_filters.png)
 
-This HAML bundle currently supports the following filters:
+This Haml bundle currently supports the following filters:
 
-* `:javascript`
-* `:coffee`
 * `:css`
-* `:sass`
-* `:scss`
+* `:coffee`
+* `:javascript`
+* `:markdown`
 * `:php`
 * `:ruby`
-* `:markdown`
+* `:ruby2js`
+* `:sass`
+* `:scss`
 
-The HAML documentation lists the following additional filters:
+The Haml documentation lists the following additional filters:
 
 * `:cdata`
 * `:erb`
