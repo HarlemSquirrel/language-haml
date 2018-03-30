@@ -263,6 +263,19 @@
     ]
   }
   {
+    'begin': '^(\\s*)(:ruby2js)$'
+    'end': '^(?!\\1\\s+|\\n)'
+    'name': 'meta.embedded.ruby2js'
+    'captures':
+      '2':
+        'name': 'entity.name.tag.haml'
+    'patterns': [
+      {
+        'include': 'source.ruby'
+      }
+    ]
+  }
+  {
     'begin': '^(\\s*)(:sass)$'
     'end': '^(?!\\1\\s+|\\n)'
     'name': 'meta.embedded.sass'
