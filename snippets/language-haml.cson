@@ -104,6 +104,9 @@
   'strong':
     'prefix': 's'
     'body': '%strong $0'
+  'hr':
+    'prefix': 'hr'
+    'body': '%hr'
   'table (basic)':
     'prefix': 't'
     'body': '%table\n  %tr\n    %td\n      ${1:Table Data}'
