@@ -1,5 +1,6 @@
 'fileTypes': [
-  'haml'
+  'haml',
+  'inky-haml'
 ]
 'foldingStartMarker': '^\\s*([-%#\\:\\.\\w\\=].*)\\s$'
 'foldingStopMarker': '^\\s*$'
