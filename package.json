@@ -1,6 +1,6 @@
 {
   "name": "language-haml",
-  "version": "0.32.0",
+  "version": "0.32.1",
   "private": true,
   "description": "HAML package for Atom",
   "keywords": [
